@@ -1,0 +1,10 @@
+Model,Test_Accuracy,CV_Mean,CV_Std,Overfitting_Gap
+Xgboost Optimized,99.7%,100.0%,0.1%,0.3%
+Lightgbm,99.7%,100.0%,0.1%,0.3%
+Gradient Boosting Optimized,99.7%,99.6%,0.3%,0.3%
+Random Forest Optimized,99.6%,99.5%,0.5%,0.4%
+Extra Trees,99.6%,99.5%,0.4%,0.4%
+Neural Network,99.8%,99.9%,0.2%,0.2%
+Svm Rbf,99.7%,99.8%,0.1%,0.3%
+Logistic Regression,100.0%,100.0%,0.0%,0.0%
+Mega-Ensemble,99.7%,N/A,N/A,N/A
