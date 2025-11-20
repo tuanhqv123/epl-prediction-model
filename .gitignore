@@ -1,0 +1,98 @@
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environment variables
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Data files (keeping only the main enhanced CSV)
+data_raw/
+data_processed/
+data_scraped/
+temp_cleanup/
+archive/
+
+# Model files (pickle files)
+*.pkl
+*.pickle
+
+# Temporary files
+*.tmp
+*.temp
+
+# Reports and analysis files (keeping only final ones)
+*results/
+*_report.csv
+*_analysis.png
+*_summary.csv
+comprehensive_ml_results/
+cutting_edge_results/
+final_ml_results/
+realistic_high_performance_results/
