@@ -1,0 +1,320 @@
+{
+  "run_id": "20251120_195836",
+  "pipeline_log": [
+    {
+      "timestamp": "2025-11-20T19:58:36.519939",
+      "phase": "PIPELINE_START",
+      "status": "INITIATED",
+      "details": {
+        "purpose": "EPL Prediction Model - Complete Pipeline",
+        "standards": "Real-world production standards with full logging"
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:36.520240",
+      "phase": "DATA_LOADING",
+      "status": "STARTED",
+      "details": {
+        "file_path": "epl_enhanced_fixed.csv"
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:36.535683",
+      "phase": "DATA_LOADING",
+      "status": "COMPLETED",
+      "details": {
+        "total_rows": 3800,
+        "total_columns": 36,
+        "date_range_start": "2015-08-08",
+        "date_range_end": "2025-05-25",
+        "seasons": [
+          "2015-2016",
+          "2016-2017",
+          "2017-2018",
+          "2018-2019",
+          "2019-2020",
+          "2020-2021",
+          "2021-2022",
+          "2022-2023",
+          "2023-2024",
+          "2024-2025"
+        ],
+        "null_values": 31,
+        "duplicate_rows": 0,
+        "target_distribution": {
+          "H": 1691,
+          "A": 1223,
+          "D": 886
+        }
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:36.536045",
+      "phase": "DATA_PROCESSING",
+      "status": "STARTED",
+      "details": null
+    },
+    {
+      "timestamp": "2025-11-20T19:58:36.538990",
+      "phase": "DATA_PROCESSING",
+      "status": "COMPLETED",
+      "details": {
+        "rows_before_cleaning": 3800,
+        "rows_after_cleaning": 3800,
+        "rows_removed": 0,
+        "removal_rate": 0.0
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:36.539188",
+      "phase": "FORM_CALCULATION",
+      "status": "STARTED",
+      "details": {
+        "form_window": 3
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.226597",
+      "phase": "FORM_CALCULATION",
+      "status": "COMPLETED",
+      "details": {
+        "home_form_range": [
+          0.0,
+          3.0
+        ],
+        "away_form_range": [
+          0.0,
+          3.0
+        ],
+        "form_diff_range": [
+          -3.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.226787",
+      "phase": "FEATURE_ENGINEERING",
+      "status": "STARTED",
+      "details": null
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.227600",
+      "phase": "FEATURE_ENGINEERING",
+      "status": "COMPLETED",
+      "details": {
+        "shot_accuracy_home": [
+          0.34740120615011416,
+          0.15208956659983902
+        ],
+        "shot_accuracy_away": [
+          0.3551564123502163,
+          0.1685459835382985
+        ],
+        "rest_days_home": [
+          6.363947368421052,
+          3.786819273191014
+        ],
+        "rest_days_away": [
+          6.413947368421053,
+          3.854618517317817
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.227701",
+      "phase": "FEATURE_SELECTION",
+      "status": "STARTED",
+      "details": null
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.227725",
+      "phase": "FEATURE_SELECTION",
+      "status": "COMPLETED",
+      "details": {
+        "total_features_selected": 20,
+        "core_stats": 12,
+        "engineered": 2,
+        "form_features": 3,
+        "competition": 3
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.227829",
+      "phase": "TRAIN_TEST_SPLIT",
+      "status": "STARTED",
+      "details": null
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.235650",
+      "phase": "TRAIN_TEST_SPLIT",
+      "status": "COMPLETED",
+      "details": {
+        "training_samples": 3040,
+        "testing_samples": 760,
+        "training_seasons": "2015-2016-2022-2023",
+        "testing_seasons": "2023-2024-2024-2025",
+        "feature_count": 20,
+        "train_target_dist": {
+          "H": 1361,
+          "A": 968,
+          "D": 711
+        },
+        "test_target_dist": {
+          "H": 330,
+          "A": 255,
+          "D": 175
+        }
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.235878",
+      "phase": "FEATURE_SCALING",
+      "status": "STARTED",
+      "details": null
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.238160",
+      "phase": "FEATURE_SCALING",
+      "status": "COMPLETED",
+      "details": {
+        "scaler_type": "StandardScaler",
+        "training_mean": 4.247870137512779,
+        "training_std": 2.1564908124712097,
+        "scaled_feature_range": "Approximately N(0,1)"
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.238271",
+      "phase": "MODEL_TRAINING",
+      "status": "STARTED",
+      "details": null
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.694726",
+      "phase": "MODEL_TRAINING",
+      "status": "COMPLETED",
+      "details": {
+        "model_type": "ExtraTreesClassifier",
+        "n_estimators": 100,
+        "max_depth": 6,
+        "class_weight": "balanced",
+        "cv_scores_mean": 0.5944664031620555,
+        "cv_scores_std": 0.01010807261070706,
+        "cv_scores_list": [
+          0.6067193675889329,
+          0.5909090909090909,
+          0.6007905138339921,
+          0.5968379446640316,
+          0.5770750988142292
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:37.695090",
+      "phase": "MODEL_EVALUATION",
+      "status": "STARTED",
+      "details": null
+    },
+    {
+      "timestamp": "2025-11-20T19:58:38.009867",
+      "phase": "MODEL_EVALUATION",
+      "status": "COMPLETED",
+      "details": {
+        "accuracy": "0.5803",
+        "draw_f1": "0.2606",
+        "macro_f1": "0.5245"
+      }
+    },
+    {
+      "timestamp": "2025-11-20T19:58:38.010505",
+      "phase": "PIPELINE_COMPLETE",
+      "status": "SUCCESS",
+      "details": {
+        "model_performance": {
+          "test_accuracy": 0.5802631578947368,
+          "draw_f1": 0.26058631921824105,
+          "macro_f1": 0.524451148505368,
+          "cv_accuracy": 0.5944664031620555,
+          "cv_std": 0.01010807261070706
+        },
+        "dataset_info": {
+          "total_matches": 3800,
+          "training_matches": 3040,
+          "testing_matches": 760,
+          "feature_count": 20,
+          "seasons_covered": "2015-2016-2024-2025"
+        },
+        "model_specification": {
+          "algorithm": "ExtraTreesClassifier",
+          "n_estimators": 100,
+          "max_depth": 6,
+          "feature_count": 20
+        }
+      }
+    }
+  ],
+  "metrics_log": {
+    "DATA_QUALITY": {
+      "timestamp": "2025-11-20T19:58:36.535901",
+      "metrics": {
+        "total_rows": 3800,
+        "total_columns": 36,
+        "date_range_start": "2015-08-08",
+        "date_range_end": "2025-05-25",
+        "seasons": [
+          "2015-2016",
+          "2016-2017",
+          "2017-2018",
+          "2018-2019",
+          "2019-2020",
+          "2020-2021",
+          "2021-2022",
+          "2022-2023",
+          "2023-2024",
+          "2024-2025"
+        ],
+        "null_values": 31,
+        "duplicate_rows": 0,
+        "target_distribution": {
+          "H": 1691,
+          "A": 1223,
+          "D": 886
+        }
+      }
+    },
+    "CROSS_VALIDATION": {
+      "timestamp": "2025-11-20T19:58:37.695016",
+      "metrics": {
+        "mean_accuracy": 0.5944664031620555,
+        "std_accuracy": 0.01010807261070706,
+        "scores": [
+          0.6067193675889329,
+          0.5909090909090909,
+          0.6007905138339921,
+          0.5968379446640316,
+          0.5770750988142292
+        ]
+      }
+    },
+    "TEST_PERFORMANCE": {
+      "timestamp": "2025-11-20T19:58:38.010053",
+      "metrics": {
+        "accuracy": 0.5802631578947368,
+        "draw_f1": 0.26058631921824105,
+        "macro_f1": 0.524451148505368
+      }
+    },
+    "FINAL_RESULTS": {
+      "timestamp": "2025-11-20T19:58:38.010598",
+      "metrics": {
+        "test_accuracy": 0.5802631578947368,
+        "draw_f1": 0.26058631921824105,
+        "macro_f1": 0.524451148505368,
+        "cv_accuracy": 0.5944664031620555,
+        "cv_std": 0.01010807261070706
+      }
+    }
+  },
+  "completion_time": "2025-11-20T19:58:38.010801"
+}
