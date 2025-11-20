@@ -72,12 +72,14 @@ Thumbs.db
 *.log
 logs/
 
-# Data files (keeping only the main enhanced CSV)
+# Data files (all CSV files are too large for GitHub)
 data_raw/
 data_processed/
 data_scraped/
 temp_cleanup/
 archive/
+*.csv
+epl_enhanced_fixed.csv
 
 # Model files (pickle files)
 *.pkl
