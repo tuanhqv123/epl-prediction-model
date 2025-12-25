@@ -1,7 +1,0 @@
-Model,Baseline,Enhanced,Improvement
-Logistic Regression,61.8%,59.2%,-2.6%
-Random Forest,58.3%,60.4%,+2.1%
-Gradient Boosting,58.4%,59.1%,+0.7%
-Xgboost,55.1%,57.5%,+2.4%
-Decision Tree,49.6%,49.1%,-0.5%
-Knn,50.1%,52.8%,+2.6%

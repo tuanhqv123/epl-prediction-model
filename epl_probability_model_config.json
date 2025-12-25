@@ -1,0 +1,60 @@
+{
+  "model_type": "logistic_regression_v12",
+  "C": 0.15,
+  "n_features": 20,
+  "features": [
+    "home_elo",
+    "away_elo",
+    "elo_diff",
+    "elo_expected",
+    "att_def_matchup",
+    "expected_diff",
+    "combined_draw_rate",
+    "h2h_draw_rate",
+    "h2h_home_rate",
+    "h2h_away_rate",
+    "h_nl_scoring",
+    "a_nl_scoring",
+    "nl_scoring_diff",
+    "h_rest",
+    "a_rest",
+    "rest_diff",
+    "avg_change_rate_diff",
+    "winrate_3_diff",
+    "cs_3_diff",
+    "shots_diff"
+  ],
+  "elo_params": {
+    "k_factor": 32,
+    "home_adv": 240,
+    "decay": 1.0,
+    "k_att": 10,
+    "k_def": 30
+  },
+  "d_boost": 0.004,
+  "h_reduce": 0.018,
+  "h2h_min": 7,
+  "nl_window": 15,
+  "rest_cap": 7,
+  "lineup_window": 5,
+  "form_window": 4,
+  "metrics": {
+    "log_loss": 0.9362815466912339,
+    "brier_score": 0.18446170821640276,
+    "improvement_vs_random": 14.775980903479185
+  },
+  "train_seasons": [
+    "2015-2016",
+    "2016-2017",
+    "2017-2018",
+    "2018-2019",
+    "2019-2020",
+    "2020-2021",
+    "2021-2022",
+    "2022-2023"
+  ],
+  "test_seasons": [
+    "2023-2024",
+    "2024-2025"
+  ]
+}
